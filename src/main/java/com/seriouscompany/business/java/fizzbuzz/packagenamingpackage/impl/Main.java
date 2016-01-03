@@ -14,6 +14,9 @@ public final class Main {
 		final ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		final FizzBuzz myFizzBuzz = (FizzBuzz) context.getBean("standardFizzBuzz");
 		final FizzBuzzUpperLimitParameter fizzBuzzUpperLimit = new DefaultFizzBuzzUpperLimitParameter();
+
+
+		//run findbuzz
 		myFizzBuzz.fizzBuzz(fizzBuzzUpperLimit.obtainUpperLimitValue());
 
 		((ConfigurableApplicationContext) context).close();
